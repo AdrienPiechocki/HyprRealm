@@ -3,7 +3,6 @@ extends CharacterBody3D
 # =======================
 # Constants / Networking
 # =======================
-const UDP_IP := "127.0.0.1"
 const UDP_PORT := 12345
 const CURSOR_CENTER := Vector2i(960, 540)
 
@@ -14,6 +13,7 @@ const CURSOR_CENTER := Vector2i(960, 540)
 @onready var raycast := $Camera3D/RayCast3D
 @onready var ui := $Camera3D/UI
 @onready var tooltip := $Camera3D/UI/Tooltip
+@onready var GM := $".."
 
 # =======================
 # State
@@ -126,6 +126,7 @@ func _apply_movement() -> void:
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		GM.send("player_pos: x=%.2f y=%.2f z=%.2f" % [position.x, position.y, position.z])
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)

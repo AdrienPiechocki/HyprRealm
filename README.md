@@ -18,7 +18,7 @@ Feel free to hack the game and make it your own! Source code availiable in the `
 1. clone this project
 2. run `install.sh`
 3. run `hyprctl relaod`
-4. launch the game (manually or at startup)
+4. launch the game with `launch.sh` (manually or at startup)
 5. play by toggling the hyprrealm submap (default bind: `SUPER + SHIFT + RETURN`)
 
 ## TROUBLESHOTING

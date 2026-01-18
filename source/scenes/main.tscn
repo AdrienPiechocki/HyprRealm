@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsid27u6lmtvn"]
+[gd_scene load_steps=11 format=3 uid="uid://dsid27u6lmtvn"]
 
 [ext_resource type="Shader" uid="uid://4mvsjxttel84" path="res://shaders/sky.gdshader" id="1_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://d3p6rlhysyksa" path="res://scenes/player.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://666marvpviwm" path="res://scenes/Prefabs/crystal.tscn" id="2_jjvhh"]
-[ext_resource type="Script" uid="uid://bl41su8l4av3g" path="res://scripts/executable.gd" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://ce1x5pynqvrkf" path="res://scenes/Prefabs/bookshelf.tscn" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://oq4ga52cj7rb" path="res://scripts/main-screen/main.gd" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://d3p6rlhysyksa" path="res://scenes/player/player.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://666marvpviwm" path="res://scenes/prefabs/crystal.tscn" id="2_jjvhh"]
+[ext_resource type="Script" uid="uid://bl41su8l4av3g" path="res://scripts/main-screen/executable.gd" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://ce1x5pynqvrkf" path="res://scenes/prefabs/bookshelf.tscn" id="4_jjvhh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_tbgi4")
@@ -31,6 +32,7 @@ glow_bloom = 1.0
 albedo_color = Color(0.4506483, 0.4506483, 0.45064825, 1)
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_tefeu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tipki")
