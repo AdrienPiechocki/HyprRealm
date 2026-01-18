@@ -5,7 +5,7 @@ You can interact with the game using Hyprland's submaps system
 
 **(WIP)** The game itself consists in a virtual space/home where you can interact with your surroundings to launch apps, read books or videos. It is a 3D first person game.
 
-Feel free to hack the game and make it your own! [Source code availiable here](https://github.com/AdrienPiechocki/HyprRealm-godot)
+Feel free to hack the game and make it your own! Source code availiable in the `source` folder.
 
 ## REQUIREMENTS
 `hyprland`\

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d4kposote31s4"]
+
+[ext_resource type="Texture2D" uid="uid://b1kkcmbs3ouim" path="res://Assets/crystal/b324e4ae48b140efac6fe69226331275_0.png" id="1_1n1jy"]
+
+[resource]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_1n1jy")
+metallic = 1.0
+roughness = 0.5
+texture_filter = 0
+texture_repeat = false
+stencil_flags = 2
