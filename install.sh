@@ -6,7 +6,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Paths
-SOURCE="$SCRIPT_DIR/hyprrealm/"
+SOURCE="$SCRIPT_DIR/config/"
 HYPR_DIR="$HOME/.config/hypr"
 DEST="$HYPR_DIR/hyprrealm/"
 HYPR_CONF="$HYPR_DIR/hyprland.conf"
