@@ -33,7 +33,7 @@ func _exec_foreground() -> void:
 		_focus_process()
 		return
 
-	process_id = OS.create_process("bash", ["-c", command])
+	process_id = OS.create_process("sh", ["-lc", command])
 	if process_id == -1:
 		push_error("Failed to start process: %s" % command)
 		return
@@ -44,7 +44,7 @@ func _exec_foreground() -> void:
 # Background execution
 # =======================
 func _exec_background() -> void:
-	OS.execute("bash", ["-c", command])
+	OS.execute("sh", ["-lc", command])
 
 # =======================
 # Process monitoring
@@ -71,7 +71,7 @@ func _on_process_finished() -> void:
 # Helpers
 # =======================
 func _send_focus() -> void:
-	OS.execute("bash", ["-c", UDP_FOCUS_CMD])
+	OS.execute("sh", ["-lc", UDP_FOCUS_CMD])
 
 func _focus_process() -> void:
 	OS.execute("hyprctl", ["dispatch", "focuswindow", "pid:%d" % process_id])
