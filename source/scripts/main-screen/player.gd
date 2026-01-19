@@ -97,6 +97,10 @@ func _process_udp_packet(packet: String) -> void:
 			try_interact()
 		"focus":
 			hasFocus = !hasFocus
+		"focus ON":
+			hasFocus = true
+		"focus OFF":
+			hasFocus = false
 		"forward", "back", "left", "right":
 			if moving.has(packet):
 				moving[packet] = true

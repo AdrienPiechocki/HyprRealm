@@ -4,7 +4,8 @@ class_name Executable
 @export var command: String = ""
 @export var runs_in_background := false
 
-const UDP_FOCUS_CMD := "echo focus | socat - UDP4-DATAGRAM:127.0.0.1:12345"
+const UDP_FOCUS_ON_CMD := "echo \"focus ON\" | socat - UDP4-DATAGRAM:127.0.0.1:12345"
+const UDP_FOCUS_OFF_CMD := "echo \"focus OFF\" | socat - UDP4-DATAGRAM:127.0.0.1:12345"
 @warning_ignore("integer_division")
 var CURSOR_CENTER := Vector2i(DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).x/2, DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).y/2)
 
@@ -25,7 +26,7 @@ func interact() -> void:
 # Foreground execution
 # =======================
 func _exec_foreground() -> void:
-	_send_focus()
+	_send_focus(false)
 	_reset_submap()
 
 	# Already running → focus window
@@ -64,14 +65,17 @@ func _on_process_finished() -> void:
 	process_id = -1
 	set_process(false)
 
-	_send_focus()
+	_send_focus(true)
 	_restore_submap()
 
 # =======================
 # Helpers
 # =======================
-func _send_focus() -> void:
-	OS.execute("sh", ["-lc", UDP_FOCUS_CMD])
+func _send_focus(toggle: bool) -> void:
+	if toggle:
+		OS.execute("sh", ["-lc", UDP_FOCUS_ON_CMD])
+	else:
+		OS.execute("sh", ["-lc", UDP_FOCUS_OFF_CMD])
 
 func _focus_process() -> void:
 	OS.execute("hyprctl", ["dispatch", "focuswindow", "pid:%d" % process_id])

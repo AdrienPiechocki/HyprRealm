@@ -12,6 +12,9 @@ MONITORS=$(hyprctl monitors -j | jq '. | length')
 # Save mouse position
 read -r MOUSE_X MOUSE_Y < <(hyprctl cursorpos | tr -d ',')
 
+# reset submap before launch
+hyprctl dispatch submap reset
+
 # One instance per screen
 for i in $(seq 0 $((MONITORS - 1))); do
   echo "Launching on screen $i"
