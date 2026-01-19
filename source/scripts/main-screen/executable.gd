@@ -4,8 +4,8 @@ class_name Executable
 @export var command: String = ""
 @export var runs_in_background := false
 
-const UDP_FOCUS_ON_CMD := "echo \"focus ON\" | socat - UDP4-DATAGRAM:127.0.0.1:12345"
-const UDP_FOCUS_OFF_CMD := "echo \"focus OFF\" | socat - UDP4-DATAGRAM:127.0.0.1:12345"
+const UDP_FOCUS_ON_CMD := "echo 'focus ON' | socat - UDP4-DATAGRAM:127.0.0.1:12345"
+const UDP_FOCUS_OFF_CMD := "echo 'focus OFF' | socat - UDP4-DATAGRAM:127.0.0.1:12345"
 @warning_ignore("integer_division")
 var CURSOR_CENTER := Vector2i(DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).x/2, DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).y/2)
 
