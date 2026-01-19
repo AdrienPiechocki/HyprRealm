@@ -1,9 +1,6 @@
 # single_screen_wallpaper.gd
 extends Node
 
-# Définir ici la scène par défaut si tu veux
-var default_scene : String = "res://scenes/main.tscn"
-
 func _ready():
 	# Récupérer l'écran via argument
 	var idx : int = 0

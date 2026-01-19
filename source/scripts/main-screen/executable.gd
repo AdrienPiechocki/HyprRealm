@@ -5,7 +5,8 @@ class_name Executable
 @export var runs_in_background := false
 
 const UDP_FOCUS_CMD := "echo focus | socat - UDP4-DATAGRAM:127.0.0.1:12345"
-const CURSOR_CENTER := Vector2i(960, 540)
+@warning_ignore("integer_division")
+var CURSOR_CENTER := Vector2i(DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).x/2, DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).y/2)
 
 var process_id := -1
 

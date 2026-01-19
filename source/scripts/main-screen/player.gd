@@ -4,7 +4,8 @@ extends CharacterBody3D
 # Constants / Networking
 # =======================
 const UDP_PORT := 12345
-const CURSOR_CENTER := Vector2i(960, 540)
+@warning_ignore("integer_division")
+var CURSOR_CENTER := Vector2i(DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).x/2, DisplayServer.screen_get_size(DisplayServer.SCREEN_OF_MAIN_WINDOW).y/2)
 
 # =======================
 # Nodes
