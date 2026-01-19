@@ -6,15 +6,14 @@ WALLPAPER_BIN="$SCRIPT_DIR/build/HyprRealm.x86_64"
 # Number of screens
 MONITORS=$(hyprctl monitors -j | jq '. | length')
 
-MOUSE_POS=$(hyprctl cursorpos)
+# Save mouse position
+read -r MOUSE_X MOUSE_Y < <(hyprctl cursorpos | tr -d ',')
 
 # One instance per screen
 for i in $(seq 0 $((MONITORS - 1))); do
   echo "Launching on screen $i"
-  hyprctl dispatch exec [monitor "$i"] "$WALLPAPER_BIN" "$i" &
+  hyprctl dispatch exec "[monitor $i]" "$WALLPAPER_BIN $i" &
 done
 
-# Reset mouse position
-if [[ -n "$MOUSE_X" && -n "$MOUSE_Y" ]]; then
-  hyprctl dispatch movecursor "$MOUSE_X" "$MOUSE_Y"
-fi
+# Restore mouse position
+sleep 1 && hyprctl dispatch movecursor "$MOUSE_X" "$MOUSE_Y"
