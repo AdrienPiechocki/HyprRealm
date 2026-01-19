@@ -4,6 +4,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_3iaii"]
 font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="UI" type="CanvasLayer"]
 

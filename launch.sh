@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Kill previous instances
+killall HyprRealm.x86_64
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WALLPAPER_BIN="$SCRIPT_DIR/build/HyprRealm.x86_64"
 

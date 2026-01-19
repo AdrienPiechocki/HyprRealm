@@ -4,14 +4,14 @@
 
 [resource]
 resource_name = "material_0"
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1.353256, 1.353256, 1.353256, 1)
 albedo_texture = ExtResource("1_1n1jy")
 metallic = 1.0
 roughness = 0.5
 emission_enabled = true
-emission_energy_multiplier = 0.25
+emission_energy_multiplier = 0.5
 emission_texture = ExtResource("1_1n1jy")
 texture_filter = 0
 texture_repeat = false

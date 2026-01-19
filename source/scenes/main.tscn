@@ -56,7 +56,7 @@ command = "kitty -e cava"
 tooltip = "cava"
 
 [node name="Crystal2" parent="." instance=ExtResource("2_jjvhh")]
-transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.7071067, 0, 0.70710677, 4, 0.5, 2)
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.7071067, 0, 0.70710677, 4, 0.5, 2.4189723)
 script = ExtResource("3_8gbba")
 command = "steam -tenfoot"
 tooltip = "steam"
