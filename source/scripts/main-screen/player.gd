@@ -97,10 +97,13 @@ func _process_udp_packet(packet: String) -> void:
 			try_interact()
 		"focus":
 			hasFocus = !hasFocus
+			OS.execute("hyprctl", ["keyword", "cursor:invisible", hasFocus])
 		"focus ON":
 			hasFocus = true
+			OS.execute("hyprctl", ["keyword", "cursor:invisible", true])
 		"focus OFF":
 			hasFocus = false
+			OS.execute("hyprctl", ["keyword", "cursor:invisible", false])
 		"forward", "back", "left", "right":
 			if moving.has(packet):
 				moving[packet] = true
@@ -166,7 +169,6 @@ func _update_camera(delta: float) -> void:
 	rotation.y = lerp_angle(rotation.y, target_yaw, camera_smooth * delta)
 	head.rotation.x = lerp_angle(head.rotation.x, target_pitch, camera_smooth * delta)
 
-	#OS.execute("hyprctl", ["keyword", "cursor:invisible", "true"])
 	OS.execute("hyprctl", ["dispatch", "movecursor", str(CURSOR_CENTER.x), str(CURSOR_CENTER.y)])
 
 func _release_cursor() -> void:
