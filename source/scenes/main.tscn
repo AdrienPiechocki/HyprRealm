@@ -52,7 +52,7 @@ size = Vector3(10, 1, 10)
 material = SubResource("StandardMaterial3D_jjgbg")
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00029098988, 1.9818962, 0.011013836)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.011)
 
 [node name="Bookshelf" parent="." instance=ExtResource("4_jjvhh")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 3, 0.5, -3)

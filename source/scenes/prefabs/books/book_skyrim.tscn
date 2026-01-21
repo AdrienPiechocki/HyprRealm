@@ -23,6 +23,7 @@ size = Vector2(0.158, 0.1)
 [sub_resource type="SystemFont" id="SystemFont_fd0o8"]
 fallbacks = Array[Font]([SubResource("SystemFont_206o7")])
 font_names = PackedStringArray("Alkhemikal")
+multichannel_signed_distance_field = true
 
 [node name="Book_Skyrim" instance=ExtResource("1_iitm7")]
 

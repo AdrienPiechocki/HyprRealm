@@ -26,6 +26,7 @@ subpixel_positioning = 0
 fallbacks = Array[Font]([SubResource("SystemFont_206o7")])
 font_names = PackedStringArray("Alkhemikal")
 subpixel_positioning = 0
+multichannel_signed_distance_field = true
 
 [node name="Book_Raspberry-Pi" instance=ExtResource("1_iitm7")]
 
