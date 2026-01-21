@@ -3,21 +3,21 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dd27wyfw0v0ks"
-path="res://.godot/imported/bookshelf.glb-dea31dac6a145a5229e4bbc782a74dc5.scn"
+uid="uid://cbnw2vhwagwyt"
+path="res://.godot/imported/terminal.glb-775f65e5b5c6c180dc93e25e086e2d23.scn"
 
 [deps]
 
-source_file="res://assets/bookshelf/bookshelf.glb"
-dest_files=["res://.godot/imported/bookshelf.glb-dea31dac6a145a5229e4bbc782a74dc5.scn"]
+source_file="res://assets/Terminal/terminal.glb"
+dest_files=["res://.godot/imported/terminal.glb-775f65e5b5c6c180dc93e25e086e2d23.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
-nodes/root_name=""
+nodes/root_type=""
+nodes/root_name="Terminal"
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=1.5
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

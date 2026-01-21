@@ -1,11 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsid27u6lmtvn"]
+[gd_scene load_steps=16 format=3 uid="uid://dsid27u6lmtvn"]
 
 [ext_resource type="Shader" uid="uid://4mvsjxttel84" path="res://shaders/sky.gdshader" id="1_tbgi4"]
 [ext_resource type="Script" uid="uid://oq4ga52cj7rb" path="res://scripts/main-screen/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://d3p6rlhysyksa" path="res://scenes/player/player.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://666marvpviwm" path="res://scenes/prefabs/crystal.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://vb8r25qf4utd" path="res://scenes/prefabs/crystal.tscn" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bl41su8l4av3g" path="res://scripts/main-screen/executable.gd" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://ce1x5pynqvrkf" path="res://scenes/prefabs/bookshelf.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://c0hiecwymw7nn" path="res://scenes/prefabs/bookshelf.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://c5jb6cx732cp5" path="res://scenes/prefabs/books/book_raspberry-pi.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dtcdasim82og2" path="res://scenes/prefabs/radio.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://r147pwvb5fkc" path="res://scenes/prefabs/books/book_skyrim.tscn" id="7_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://dpuk5ushlvwrv" path="res://scenes/prefabs/table.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cxyupou0hl6cv" path="res://scenes/prefabs/terminal.tscn" id="9_choun"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_tbgi4")
@@ -47,19 +52,44 @@ size = Vector3(10, 1, 10)
 material = SubResource("StandardMaterial3D_jjgbg")
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00029098988, 1.9818962, 0.011013836)
+
+[node name="Bookshelf" parent="." instance=ExtResource("4_jjvhh")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 3, 0.5, -3)
+
+[node name="Book_Raspberry-Pi" parent="Bookshelf" instance=ExtResource("5_tbgi4")]
+transform = Transform3D(-0.19278067, -0.40612954, 0.8932502, -0.03825531, 0.9127444, 0.40673697, -0.980496, 0.044239447, -0.19149622, -0.63403976, 1.6732483, 0.15857601)
+script = ExtResource("3_8gbba")
+command = "xdg-open \"/home/adrien/Documents/Livres/Raspbery-PI/officialraspberrypihandbook2026.pdf\""
+tooltip = "The official Raspberry Pi Handbook 2026 "
+
+[node name="Book_Skyrim" parent="Bookshelf" instance=ExtResource("7_ya4ey")]
+transform = Transform3D(-0.30546254, 0, -0.9522041, 0, 1, 0, 0.9522041, 0, -0.30546254, -0.27347422, 1.5297666, 0.19525623)
+script = ExtResource("3_8gbba")
+command = "xdg-open \"/home/adrien/Documents/Livres/Third Editions/Les Parchemins de Tamriel : Skyrim.pdf\""
+tooltip = "Les Parchemins de Tamriel : Skyrim"
 
 [node name="Crystal" parent="." instance=ExtResource("2_jjvhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.5, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49621153, 0.49144924, -3.3585243)
 script = ExtResource("3_8gbba")
 command = "kitty -e cava"
 tooltip = "cava"
 
-[node name="Crystal2" parent="." instance=ExtResource("2_jjvhh")]
-transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.7071067, 0, 0.70710677, 4, 0.5, 2.4189723)
+[node name="Radio" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 3.3597145, 1.4288898, -2.7563224)
 script = ExtResource("3_8gbba")
-command = "steam -tenfoot"
-tooltip = "steam"
+command = "~/Dots/Scripts/Music/Playlist.sh"
+runs_in_background = true
+tooltip = "Playlist"
 
-[node name="Bookshelf" parent="." instance=ExtResource("4_jjvhh")]
-transform = Transform3D(-0.8838835, 0, 0.8838835, 0, 1.25, 0, -0.8838835, 0, -0.8838835, 3, 0.5, -3)
+[node name="Table" parent="." instance=ExtResource("8_85g3d")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 4.3323717, 0.5, -0.57742316)
+script = ExtResource("3_8gbba")
+command = "nautilus -w"
+tooltip = "dossiers"
+
+[node name="Terminal" parent="." instance=ExtResource("9_choun")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.279095, 1.5000002, -0.5670942)
+script = ExtResource("3_8gbba")
+command = "kitty"
+tooltip = "terminal"

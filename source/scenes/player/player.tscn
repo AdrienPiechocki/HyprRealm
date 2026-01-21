@@ -24,3 +24,6 @@ mesh = SubResource("CapsuleMesh_acmnh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_3eola")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 1.5

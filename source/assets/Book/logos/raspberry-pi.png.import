@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuibnt5xqaqbi"
-path.s3tc="res://.godot/imported/bookshelf_2.png-d313d76ad9fcb9c80b73f7acf1160ce5.s3tc.ctex"
+uid="uid://cikvhfmk5rf4x"
+path.s3tc="res://.godot/imported/raspberry-pi.png-bd14a14f90113370deb4ec2a7fac4306.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "146e8f8309ce8875aeea6a24f1c24cb3"
-}
 
 [deps]
 
-source_file="res://assets/bookshelf/bookshelf_2.png"
-dest_files=["res://.godot/imported/bookshelf_2.png-d313d76ad9fcb9c80b73f7acf1160ce5.s3tc.ctex"]
+source_file="res://assets/Book/logos/raspberry-pi.png"
+dest_files=["res://.godot/imported/raspberry-pi.png-bd14a14f90113370deb4ec2a7fac4306.s3tc.ctex"]
 
 [params]
 
