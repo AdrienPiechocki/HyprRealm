@@ -58,7 +58,7 @@ material = SubResource("StandardMaterial3D_jjgbg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.011)
 
 [node name="Bookshelf" parent="." unique_id=1452944487 instance=ExtResource("4_jjvhh")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 3, 0.5, -3)
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 2.9490123, 0.5, -2.9996395)
 
 [node name="Book_Raspberry-Pi" parent="Bookshelf" unique_id=89995697 instance=ExtResource("5_tbgi4")]
 transform = Transform3D(-0.19278067, -0.40612954, 0.8932502, -0.03825531, 0.9127444, 0.40673697, -0.980496, 0.044239447, -0.19149622, -0.63403976, 1.6732483, 0.15857601)
@@ -94,5 +94,5 @@ tooltip = "dossiers"
 [node name="Terminal" parent="." unique_id=1292269795 instance=ExtResource("9_choun")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.279095, 1.5000002, -0.5670942)
 script = ExtResource("3_8gbba")
-command = "kitty"
+command = "kitty ~"
 tooltip = "terminal"
